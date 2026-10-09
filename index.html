@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09251c">
+  <title>A Little World of Us 💚</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --forest: #09251c;
+      --emerald: #174b38;
+      --gold: #d8c18b;
+      --cream: #f5f0df;
+      --muted: #c2d2c3;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(ellipse at 50% 10%,
+          #285b40 0%, transparent 48%),
+        radial-gradient(ellipse at 0% 100%,
+          #163e30 0%, transparent 55%),
+        linear-gradient(155deg, #0d3024, var(--forest) 70%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 16px;
+      overflow-x: hidden;
+    }
+
+    .fireflies {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .firefly {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #f1dfa0;
+      box-shadow: 0 0 12px 3px #c4d78a66;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    .firefly:nth-child(1) {
+      top: 18%; left: 12%;
+    }
+
+    .firefly:nth-child(2) {
+      top: 32%; left: 84%;
+      animation-delay: 1s;
+    }
+
+    .firefly:nth-child(3) {
+      top: 73%; left: 19%;
+      animation-delay: 1.8s;
+    }
+
+    .firefly:nth-child(4) {
+      top: 80%; left: 78%;
+      animation-delay: 0.6s;
+    }
+
+    @keyframes glow {
+      from { opacity: 0.25; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1.35); }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 540px;
+      text-align: center;
+      padding: 48px 27px 36px;
+      border: 1px solid #d8c18b55;
+      border-radius: 180px 180px 24px 24px;
+      background: linear-gradient(
+        160deg, #153e2fd9, #09251ceF
+      );
+      box-shadow: 0 24px 80px #00000035;
+      animation: arrive 1.2s ease both;
+    }
+
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .leaf {
+      color: var(--gold);
+      font-size: 29px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 20px 0 12px;
+      font-size: clamp(35px, 9vw, 53px);
+      font-weight: normal;
+      line-height: 1.12;
+      letter-spacing: -1px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+      margin: 0 auto;
+      max-width: 350px;
+    }
+
+    .ornament {
+      margin: 27px 0;
+      color: var(--gold);
+      letter-spacing: 9px;
+      font-size: 14px;
+    }
+
+    .message {
+      color: var(--cream);
+      font-size: 16px;
+      line-height: 1.9;
+      max-width: 360px;
+      margin: 0 auto 28px;
+    }
+
+    button {
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      background: var(--gold);
+      color: #173626;
+      padding: 15px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.25s;
+    }
+
+    button:hover {
+      background: #eee0b7;
+      transform: translateY(-2px);
+    }
+
+    button:focus-visible {
+      outline: 3px solid white;
+      outline-offset: 4px;
+    }
+
+    #reveal {
+      margin: 24px auto 0;
+      max-width: 350px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    #reveal[hidden] {
+      display: none;
+    }
+
+    .signature {
+      margin-top: 34px;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fireflies" aria-hidden="true">
+    <span class="firefly"></span>
+    <span class="firefly"></span>
+    <span class="firefly"></span>
+    <span class="firefly"></span>
+  </div>
+
+  <main class="card">
+    <div class="leaf" aria-hidden="true">❧</div>
+
+    <p class="eyebrow">A birthday little adventure</p>
+
+    <h1>A Little<br>World of Us</h1>
+
+    <p class="subtitle">
+      For Aabhyanshi,<br>
+      on her very special day.
+    </p>
+
+    <div class="ornament" aria-hidden="true">✦ ❧ ✦</div>
+
+    <p class="message">
+      Some of my favourite places aren't places at all.
+      They're the little moments, the silly laughs,
+      and the memories that become special
+      simply because they're with you.
+    </p>
+
+    <button id="enterButton" type="button">
+      Enter our little world ✦
+    </button>
+
+    <section id="reveal" hidden aria-live="polite">
+      Happy birthday, Aabhyanshi. 💚
+
+      <p>
+        I've made a few little things for you,
+        each holding a different piece of my heart.
+
+        Your next surprise is waiting in the
+        second envelope. Take your time with it.
+      </p>
+
+      <p>There's no rush. This little world is yours.</p>
+    </section>
+
+    <footer class="signature">
+      MADE WITH LOVE · JUST FOR YOU
+    </footer>
+  </main>
+
+  <script>
+    const button = document.getElementById("enterButton");
+    const reveal = document.getElementById("reveal");
+
+    button.addEventListener("click", () => {
+      reveal.hidden = false;
+      button.textContent = "Your little adventure awaits 💚";
+      button.disabled = true;
+      button.style.opacity = "0.85";
+    });
+  </script>
+</body>
+</html>
