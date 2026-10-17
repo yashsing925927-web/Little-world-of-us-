@@ -4,25 +4,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#252c29">
-
-<title>A Little World of Us 💚</title>
+<meta name="theme-color" content="#696747">
+<title>A Little World of Us ✨</title>
 
 <style>
 :root {
-  --bg: #252c29;
-  --bg2: #343c37;
-  --sage: #89968b;
-  --sage-light: #b5beb0;
-  --hazel: #b8aa8d;
-  --ivory: #eeeae0;
-  --muted: #c3c8bd;
-  --border: rgba(190,196,177,.22);
+  --bg: #696747;
+  --bg2: #77734e;
+  --sage: #b1ad7b;
+  --sage-light: #e6dfbc;
+  --hazel: #d5b36d;
+  --ivory: #fbf5e5;
+  --muted: #e4dfc8;
+  --border: rgba(218,193,126,.44);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
   min-height: 100%;
@@ -37,11 +34,10 @@ body {
   color: var(--ivory);
   font-family: Georgia, "Times New Roman", serif;
   background:
-    radial-gradient(ellipse at 15% 15%,
-      rgba(119,137,120,.19), transparent 48%),
-    radial-gradient(ellipse at 85% 80%,
-      rgba(157,143,112,.12), transparent 42%),
-    linear-gradient(145deg,#252c29,#303a33 55%,#292e2a);
+    radial-gradient(ellipse at 17% 16%, rgba(178,174,111,.42), transparent 43%),
+    radial-gradient(ellipse at 84% 73%, rgba(199,164,91,.28), transparent 45%),
+    radial-gradient(ellipse at 52% 48%, rgba(136,133,79,.24), transparent 58%),
+    linear-gradient(145deg, #77734e 0%, #625f40 48%, #454632 100%);
 }
 
 #fireflies {
@@ -58,11 +54,9 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(
-    ellipse at center,
-    transparent 10%,
-    rgba(16,22,19,.25) 100%
-  );
+  background:
+    radial-gradient(ellipse at center, transparent 20%, rgba(20,13,7,.26) 100%),
+    linear-gradient(180deg, rgba(255,213,145,.035), transparent 40%);
 }
 
 .site {
@@ -86,6 +80,7 @@ body {
   text-align: center;
   margin-bottom: 22px;
   text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(226,182,109,.3);
 }
 
 .page {
@@ -100,27 +95,24 @@ body {
 }
 
 @keyframes arrive {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .card {
   position: relative;
   overflow: hidden;
-  padding: 37px 27px;
+  padding: 39px 28px;
   text-align: center;
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  background: rgba(47,57,51,.79);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 18px 65px rgba(0,0,0,.17);
+  border: 1px solid rgba(230,207,145,.60);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(91,86,58,.91), rgba(61,61,43,.91));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    0 22px 70px rgba(20,19,10,.28),
+    0 0 34px rgba(214,193,105,.10),
+    inset 0 1px 0 rgba(255,245,203,.14);
 }
 
 .card::before {
@@ -130,9 +122,7 @@ body {
   left: 16%;
   width: 68%;
   height: 1px;
-  background: linear-gradient(
-    90deg, transparent, var(--hazel), transparent
-  );
+  background: linear-gradient(90deg, transparent, var(--hazel), transparent);
 }
 
 .symbol {
@@ -140,6 +130,7 @@ body {
   font-size: 25px;
   margin-bottom: 18px;
   color: var(--hazel);
+  text-shadow: 0 0 18px rgba(241,201,121,.24);
   animation: glow 4s ease-in-out infinite;
 }
 
@@ -189,9 +180,7 @@ h2 {
   margin: 0 auto 25px;
 }
 
-.heart {
-  color: #c9b7a1;
-}
+.heart { color: #e0bd8d; }
 
 .divider {
   display: flex;
@@ -220,28 +209,26 @@ h2 {
   max-width: 285px;
   min-height: 49px;
   padding: 14px 20px;
-  border: 1px solid rgba(223,220,200,.25);
+  border: 1px solid rgba(255,226,173,.68);
   border-radius: 999px;
-  background: linear-gradient(135deg,#7d8b7e,#68786b);
-  color: #fffaf0;
+  background: linear-gradient(135deg, #d6c487 0%, #b9b17a 52%, #8f9162 100%);
+  color: #fff8eb;
   font-family: Arial, sans-serif;
   font-size: 12px;
-  letter-spacing: .6px;
+  letter-spacing: 1.1px;
   cursor: pointer;
-  box-shadow: 0 5px 22px rgba(0,0,0,.13);
+  box-shadow: 0 7px 26px rgba(180,171,99,.22), inset 0 1px 0 rgba(255,245,217,.35);
   transition: transform .25s, box-shadow .25s, background .25s;
   -webkit-tap-highlight-color: transparent;
 }
 
 .action-button:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg,#929e8d,#778676);
-  box-shadow: 0 8px 27px rgba(0,0,0,.22);
+  background: linear-gradient(135deg, #e8d79b 0%, #cdc487 52%, #a6a574 100%);
+  box-shadow: 0 10px 32px rgba(180,171,99,.30), inset 0 1px 0 rgba(255,245,217,.4);
 }
 
-.action-button:active {
-  transform: scale(.98);
-}
+.action-button:active { transform: scale(.98); }
 
 .action-button:focus-visible {
   outline: 2px solid var(--hazel);
@@ -256,18 +243,18 @@ h2 {
   box-shadow: none;
 }
 
-.secondary-button:hover {
-  background: rgba(255,255,255,.04);
-}
+.secondary-button:hover { background: rgba(245,225,191,.06); }
 
 .letter-paper {
-  padding: 25px 20px;
+  padding: 27px 21px;
   margin: 8px 0 24px;
-  border: 1px solid rgba(184,170,141,.24);
-  border-radius: 12px;
-  background: rgba(231,228,213,.045);
+  border: 1px solid rgba(237,215,164,.72);
+  border-radius: 4px 13px 5px 12px;
+  background:
+    radial-gradient(ellipse at 12% 10%, rgba(255,255,255,.42), transparent 45%),
+    linear-gradient(135deg, #f0e7ce 0%, #e4d7b4 52%, #f4e9cc 100%);
   text-align: left;
-  box-shadow: inset 0 0 30px rgba(184,170,141,.025);
+  box-shadow: 0 10px 30px rgba(12,8,4,.2), inset 0 0 24px rgba(123,109,65,.08);
 }
 
 .letter-heading {
@@ -276,29 +263,27 @@ h2 {
   font-family: Arial, sans-serif;
   letter-spacing: 2px;
   font-size: 9px;
-  color: var(--hazel);
+  color: #805b30;
   margin-bottom: 23px;
 }
 
 .letter-text {
-  color: #e4e3d8;
+  color: #493522;
   font-size: 16px;
   line-height: 2;
   overflow-wrap: anywhere;
 }
 
-.letter-text p {
-  margin: 0 0 18px;
-}
+.letter-text p { margin: 0 0 18px; }
 
 .letter-text .opening {
   font-size: 18px;
-  color: var(--ivory);
+  color: #3d2b1b;
 }
 
 .letter-text .ending {
   margin-top: 24px;
-  color: var(--sage-light);
+  color: #805b30;
 }
 
 .twist {
@@ -308,7 +293,7 @@ h2 {
 }
 
 .twist-highlight {
-  color: var(--hazel);
+  color: #f0c678;
   font-style: italic;
 }
 
@@ -317,7 +302,7 @@ h2 {
   border-radius: 12px;
   padding: 17px 15px;
   margin: 23px 0;
-  background: rgba(184,170,141,.045);
+  background: rgba(196,154,98,.075);
   color: var(--sage-light);
   font-size: 14px;
   line-height: 1.8;
@@ -330,7 +315,7 @@ h2 {
   font-size: 9px;
   letter-spacing: 2px;
   line-height: 1.8;
-  color: rgba(221,222,208,.48);
+  color: rgba(245,234,216,.55);
 }
 
 .page-indicator {
@@ -344,7 +329,7 @@ h2 {
   height: 5px;
   width: 5px;
   border-radius: 50%;
-  background: rgba(196,199,183,.3);
+  background: rgba(221,201,168,.34);
   transition: all .3s;
 }
 
@@ -355,36 +340,21 @@ h2 {
 }
 
 .small-note {
-  color: rgba(221,222,208,.52);
+  color: rgba(245,234,216,.58);
   font-size: 11px;
   line-height: 1.7;
   margin-top: 19px;
 }
 
 @media (max-width: 380px) {
-  .card {
-    padding: 30px 20px;
-  }
-
-  .letter-paper {
-    padding: 21px 16px;
-  }
-
-  .letter-text {
-    font-size: 15px;
-  }
+  .card { padding: 30px 20px; }
+  .letter-paper { padding: 21px 16px; }
+  .letter-text { font-size: 15px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .symbol {
+  .symbol, .page.active, .action-button {
     animation: none;
-  }
-
-  .page.active {
-    animation: none;
-  }
-
-  .action-button {
     transition: none;
   }
 }
@@ -392,47 +362,31 @@ h2 {
 </head>
 
 <body>
-
 <canvas id="fireflies" aria-hidden="true"></canvas>
 <div class="ambient" aria-hidden="true"></div>
 
 <main class="site">
-
   <div class="top-label">✦ A LITTLE WORLD OF US ✦</div>
 
   <!-- PAGE 1: INTRODUCTION -->
   <section class="page active" id="page1">
     <div class="card">
       <span class="symbol">✧</span>
-
       <p class="eyebrow">A little adventure, made just for you</p>
-
       <h1>Happy Birthday,<br>Aabhyanshi <span class="heart">♡</span></h1>
-
-      <p class="subtitle">
-        For my Mon Cœur, on her very special day.
-      </p>
-
+      <p class="subtitle">For my Mon Cœur, on her very special day.</p>
       <div class="divider">✦</div>
-
       <p class="body-copy">
         Today, I've made you a tiny little world of your own.
         Inside it are a few words, a few memories, and some
         feelings I've been saving just for you.
       </p>
-
       <p class="body-copy">
         So take a breath, follow the little lights, and open
         each page slowly.
       </p>
-
-      <p class="subtitle">
-        This little adventure is yours. <span class="heart">💗</span>
-      </p>
-
-      <button class="action-button" data-go="2">
-        Let's begin <span>✦</span>
-      </button>
+      <p class="subtitle">This little adventure is yours. <span class="heart">💗</span></p>
+      <button class="action-button" data-go="2">Let's begin <span>✦</span></button>
     </div>
   </section>
 
@@ -440,52 +394,23 @@ h2 {
   <section class="page" id="page2">
     <div class="card">
       <span class="symbol">♡</span>
-
       <p class="eyebrow">A little piece of my heart</p>
-
       <h2>A letter for you</h2>
 
       <div class="letter-paper">
         <div class="letter-heading">OPEN WITH LOVE</div>
-
         <div class="letter-text">
-          <p class="opening">
-            So first of all Happy Birthday Mon Coeur😇💗
-          </p>
-
-          <p>
-            So this is a personal letter only for you.
-            I just want you to know that you matter to me.
-          </p>
-
-          <p>
-            You are my favourite person, my bestfriend and
-            my everything 🥲❤️ and i just wish that this thing
-            we have never ends.
-          </p>
-
-          <p>
-            And no matter what happens you will always be
-            special to me Aabhyanshi❤️🫶🏼
-          </p>
-
-          <p class="ending">
-            Once again Happy Birthday
-          </p>
+          <p class="opening">So first of all Happy Birthday Mon Coeur😇💗</p>
+          <p>So this is a personal letter only for you. I just want you to know that you matter to me.</p>
+          <p>You are my favourite person, my bestfriend and my everything 🥲❤️ and i just wish that this thing we have never ends.</p>
+          <p>And no matter what happens you will always be special to me Aabhyanshi❤️🫶🏼</p>
+          <p class="ending">Once again Happy Birthday</p>
         </div>
       </div>
 
-      <p class="subtitle">
-        Some words are small, but the feelings behind them aren't.
-      </p>
-
-      <button class="action-button" data-go="3">
-        Keep going, birthday girl <span>♡</span>
-      </button>
-
-      <button class="action-button secondary-button" data-go="1">
-        ← Read the beginning again
-      </button>
+      <p class="subtitle">Some words are small, but the feelings behind them aren't.</p>
+      <button class="action-button" data-go="3">Keep going, birthday girl <span>♡</span></button>
+      <button class="action-button secondary-button" data-go="1">← Read the beginning again</button>
     </div>
   </section>
 
@@ -493,30 +418,13 @@ h2 {
   <section class="page" id="page3">
     <div class="card">
       <span class="symbol">✧</span>
-
       <p class="eyebrow">Before you go...</p>
-
-      <h2 class="twist">
-        Wait… you thought that was it?
-      </h2>
-
-      <p class="subtitle">
-        Awww, that's adorable. 👀
-      </p>
-
+      <h2 class="twist">Wait… you thought that was it?</h2>
+      <p class="subtitle">Awww, that's adorable. 👀</p>
       <div class="divider">✦</div>
-
-      <p class="body-copy">
-        Did you really think I'd put all this effort into
-        your birthday just to stop here?
-      </p>
-
-      <h2 class="twist-highlight">Nope. Not even close. 😂💚</h2>
-
-      <p class="body-copy">
-        There's another envelope waiting for you, and trust
-        me, we're not done yet.
-      </p>
+      <p class="body-copy">Did you really think I'd put all this effort into your birthday just to stop here?</p>
+      <h2 class="twist-highlight">Nope. Not even close. 😂🤎</h2>
+      <p class="body-copy">There's another envelope waiting for you, and trust me, we're not done yet.</p>
 
       <div class="final-note">
         Go on, birthday girl.<br>
@@ -525,14 +433,8 @@ h2 {
       </div>
 
       <span class="symbol">♡</span>
-
-      <button class="action-button" data-go="1">
-        Back to our little world ✦
-      </button>
-
-      <p class="small-note">
-        P.S. Yes, I really did plan more than one surprise. 🤭
-      </p>
+      <button class="action-button" data-go="1">Back to our little world ✦</button>
+      <p class="small-note">P.S. Yes, I really did plan more than one surprise. 🤭</p>
     </div>
   </section>
 
@@ -543,16 +445,13 @@ h2 {
   </div>
 
   <footer class="footer">
-    MADE WITH LOVE · JUST FOR YOU
-    <br>
-    <span style="color:#b8aa8d">♡</span>
+    MADE WITH LOVE · JUST FOR YOU<br>
+    <span style="color:#e2b66d">♡</span>
   </footer>
-
 </main>
 
 <script>
 /* PAGE SWITCHING */
-
 const pages = [
   document.getElementById("page1"),
   document.getElementById("page2"),
@@ -576,21 +475,17 @@ function showPage(number) {
 
   window.scrollTo({
     top: 0,
-    behavior: window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches ? "auto" : "smooth"
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? "auto" : "smooth"
   });
 }
 
 document.querySelectorAll("[data-go]").forEach(button => {
-  button.addEventListener("click", () => {
-    showPage(Number(button.dataset.go));
-  });
+  button.addEventListener("click", () => showPage(Number(button.dataset.go)));
 });
 
 
-/* CONTINUOUS FLOATING FIREFLIES */
-
+/* CONTINUOUS FLOATING HAZEL-GOLD FIREFLIES */
 const canvas = document.getElementById("fireflies");
 const ctx = canvas.getContext("2d");
 
@@ -600,15 +495,13 @@ let fireflies = [];
 let pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
 
 const colours = [
-  [181, 195, 174],  // soft sage
-  [139, 158, 141],  // grey-green
-  [190, 174, 137],  // muted hazel
-  [215, 208, 178]   // warm ivory-gold
+  [224, 216, 143],  // olive-hazel glow
+  [190, 190, 119],  // soft olive
+  [245, 229, 174],  // warm cream-gold
+  [213, 179, 109]   // golden hazel
 ];
 
-const reducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-);
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function random(min, max) {
   return Math.random() * (max - min) + min;
@@ -621,24 +514,14 @@ function resizeCanvas() {
 
   canvas.width = Math.round(width * pixelRatio);
   canvas.height = Math.round(height * pixelRatio);
-
   canvas.style.width = width + "px";
   canvas.style.height = height + "px";
-
   ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
 
-  const count = Math.min(
-    38,
-    Math.max(16, Math.floor(width / 11))
-  );
+  const count = Math.min(38, Math.max(16, Math.floor(width / 11)));
 
-  while (fireflies.length < count) {
-    fireflies.push(makeFirefly(true));
-  }
-
-  if (fireflies.length > count) {
-    fireflies.length = count;
-  }
+  while (fireflies.length < count) fireflies.push(makeFirefly(true));
+  if (fireflies.length > count) fireflies.length = count;
 }
 
 function makeFirefly(initial = false) {
@@ -652,9 +535,7 @@ function makeFirefly(initial = false) {
     speedY: random(-0.28, -0.055),
     phase: random(0, Math.PI * 2),
     pulse: random(0.012, 0.028),
-    colour: colours[
-      Math.floor(Math.random() * colours.length)
-    ]
+    colour: colours[Math.floor(Math.random() * colours.length)]
   };
 }
 
@@ -664,7 +545,6 @@ function drawFireflies() {
   fireflies.forEach(f => {
     if (!reducedMotion.matches) {
       f.phase += f.pulse;
-
       f.x += f.speedX + Math.sin(f.phase * 0.65) * 0.13;
       f.y += f.speedY;
 
@@ -678,25 +558,14 @@ function drawFireflies() {
     }
 
     const glow = reducedMotion.matches
-      ? 0.65
-      : 0.35 + (Math.sin(f.phase) + 1) * 0.24;
+      ? 0.65 : 0.35 + (Math.sin(f.phase) + 1) * 0.24;
 
     const [r, g, b] = f.colour;
+    const gradient = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, f.size * 5);
 
-    const gradient = ctx.createRadialGradient(
-      f.x, f.y, 0,
-      f.x, f.y, f.size * 5
-    );
-
-    gradient.addColorStop(
-      0, `rgba(${r},${g},${b},${glow})`
-    );
-    gradient.addColorStop(
-      0.25, `rgba(${r},${g},${b},${glow * 0.45})`
-    );
-    gradient.addColorStop(
-      1, `rgba(${r},${g},${b},0)`
-    );
+    gradient.addColorStop(0, `rgba(${r},${g},${b},${glow})`);
+    gradient.addColorStop(0.25, `rgba(${r},${g},${b},${glow * 0.45})`);
+    gradient.addColorStop(1, `rgba(${r},${g},${b},0)`);
 
     ctx.beginPath();
     ctx.fillStyle = gradient;
@@ -713,10 +582,8 @@ function drawFireflies() {
 }
 
 window.addEventListener("resize", resizeCanvas);
-
 resizeCanvas();
 drawFireflies();
 </script>
-
 </body>
 </html>
